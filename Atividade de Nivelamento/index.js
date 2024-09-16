@@ -1,7 +1,12 @@
 function addTask() {
     const taskInput = document.getElementById('taskInput');
-    const taskText = taskInput.value.trim();
+    const taskPriority = document.getElementById('taskPriority');
+    const taskTime = document.getElementById('taskTime');
     
+    const taskText = taskInput.value.trim();
+    const priorityText = taskPriority.value.trim();
+    const timeText = taskTime.value.trim();
+
     if (taskText === '') {
         alert('Por favor, insira uma tarefa!');
         return;
@@ -13,6 +18,11 @@ function addTask() {
     const taskSpan = document.createElement('span');
     taskSpan.textContent = taskText;
     li.appendChild(taskSpan);
+
+    const taskDetails = document.createElement('span');
+    taskDetails.className = 'task-details';
+    taskDetails.textContent = `Prioridade: ${priorityText}, Horário: ${timeText}`;
+    li.appendChild(taskDetails);
 
     const completeButton = document.createElement('button');
     completeButton.textContent = 'Concluir';
@@ -31,4 +41,6 @@ function addTask() {
 
     taskList.appendChild(li);
     taskInput.value = '';
+    taskPriority.value = '';
+    taskTime.value = '';
 }
