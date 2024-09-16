@@ -8,28 +8,30 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
-        h1{
+        h1 {
             font-family: "Nerko One", cursive;
             font-weight: 400;
             font-style: normal;
         }
-
-      
-        
     </style>
-   
-    
+
 </head>
 <body>
 
-    <div class="caixa">
-        <h1>Lista de Tarefas</h1>
-        <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa...">
-        <button onclick="adicionarTask()">Adicionar Tarefa</button>
-        <ul id="taskList"></ul>
-    </div>
-    <script src="index.js"></script>
+<div class="video-container">
+    <video src="video.mp4" autoplay muted loop></video>
+</div>
+
+<div class="caixa">
+    <h1>Lista de Tarefas</h1>
+    <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa...">
+    <input type="text" id="taskPriority" placeholder="Prioridade (alta, média, baixa)">
+    <input type="text" id="taskTime" placeholder="Horário (ex: 14:00)">
+    <button onclick="addTask()">Adicionar Tarefa</button>
+    <ul id="taskList"></ul>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
