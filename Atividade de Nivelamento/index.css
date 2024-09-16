@@ -23,8 +23,8 @@ video {
 }
 
 .caixa {
-    background-color: rgba(252, 252, 252, 0.0);
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
     padding: 50px;
     width: 700px;
     font-family: "Nerko One", cursive;
