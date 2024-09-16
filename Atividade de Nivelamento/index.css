@@ -1,22 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
 body {
-    font-family: "Nerko One", cursive;;
+    font-family: "Nerko One", cursive;
     background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
-.caixa{
-    background-color: #f4ec58;
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caixa {
+    background-color: rgba(252, 252, 252, 0.0);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(98, 216, 214, 0.1);
     padding: 50px;
     width: 700px;
     font-family: "Nerko One", cursive;
     font-weight: 400;
     font-style: normal;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    top: 100px;
+    color: #ffffff; 
+    font-size: 48px;
 }
 
 h1 {
@@ -25,25 +44,37 @@ h1 {
 }
 
 input[type="text"] {
-    width: calc(100% - 90px);
+    width: calc(100% - 120px);
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #020202;
+    color: #ffffff; /
+}
+
+input[type="text"]:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: #888888; 
 }
 
 button {
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 19px;
     border: none;
     border-radius: 5px;
-    background-color: #a9e8f2;
-    color: #000000;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
     cursor: pointer;
+    font-family: "Nerko One", cursive;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
 
 ul {
@@ -55,7 +86,7 @@ li {
     display: flex;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ffffff;
 }
 
 li.completed {
@@ -70,8 +101,9 @@ button.remove {
 button.remove:hover {
     background-color: #c82333;
 }
-.h1{
-    font-family: "Nerko One", cursive;
-    font-weight: 400;
-    font-style: normal;
+
+.task-details {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
 }
